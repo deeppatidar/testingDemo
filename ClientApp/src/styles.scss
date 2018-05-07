@@ -50,7 +50,7 @@ mdb-tabset .margin li {
 }
 
 .nav-tabs .nav-item {
-    margin-bottom: -1px!important;
+    margin-bottom: -2px!important;
 }
 .nav-link {
     display: block;
@@ -150,7 +150,20 @@ tabs {
 }
 
 .modal-open .modal {
-
 overflow-y: auto;
+}
+.modal-body {
+  padding: 15px;
+}
+.md-form {
+  margin-top: 5px;
+  texarea {
+    &.md-textarea {
+      padding: 10px;
+    }
+  }
+}
 
+.custom-textarea {
+  padding: 5px !important;
 }

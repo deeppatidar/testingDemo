@@ -1,45 +1,45 @@
 <div class="container-fluid">
   <div class="row margin-l">
     <div class="x-small col-sm-3 col-xs-2" *ngFor="let card of cardData">
-      <app-card [cardTitle]="card.title" [progressPercent]="" [cardValue]="card.value" [cardIcon]=""></app-card>
+      <app-card [cardTitle]="card.title" [progressPercent]="" [cardValue]="card.value" [cardIcon]="card.icon"></app-card>
     </div>
   </div>
   <br>
   <div class="row">
     <div class="col-md-12">
       <mdb-tabset #staticTabs [buttonClass]="'nav-tabs tabs-4 pills-secondary white margin'" [contentClass]="''">
-         <mdb-tab heading="Confirmed Trip({{tripDetail.confirm}})">
+         <mdb-tab heading="Confirmed Trip({{tripDetail.confirm}})" (select)="changeTab('confirmed-trip')">
            <div class="row">
              <div class="col-12">
                <div class="table-wrapper">
-                  <app-transaction-table [tableData]="tableData"></app-transaction-table>
+                  <app-transaction-table [tableData]="tableData" [optionsSelect]="optionsSelect" [activeUrl]="activeUrl"></app-transaction-table>
                 </div>
               </div>
            </div>
          </mdb-tab>
-         <mdb-tab heading="Completed({{tripDetail.completed}})">
+         <mdb-tab heading="Completed({{tripDetail.completed}})" (select)="changeTab('completed-trip')">
            <div class="row">
              <div class="col-12">
-               <div class="px-2 table-wrapper">
-                  <app-transaction-table [tableData]="tableData"></app-transaction-table>
+               <div class="table-wrapper">
+                  <app-transaction-table [tableData]="tableData" [optionsSelect]="optionsSelect" [activeUrl]="activeUrl"></app-transaction-table>
                 </div>
              </div>
            </div>
          </mdb-tab>
-         <mdb-tab heading="Cancelled({{tripDetail.completed}})">
+         <mdb-tab heading="Cancelled({{tripDetail.cancelled}})" (select)="changeTab('cancelled-trip')">
            <div class="row">
              <div class="col-12">
-               <div class="px-2 table-wrapper">
-                  <app-transaction-table [tableData]="tableData"></app-transaction-table>
+               <div class="table-wrapper">
+                  <app-transaction-table [tableData]="tableData" [optionsSelect]="optionsSelect" [activeUrl]="activeUrl"></app-transaction-table>
                 </div>
              </div>
            </div>
          </mdb-tab>
-         <mdb-tab heading="General Ledger">
+         <mdb-tab heading="General Ledger" (select)="changeTab('general-ledger')">
            <div class="row">
              <div class="col-12">
-               <div class="px-2 table-wrapper">
-                    <flight-cmd-general-ledger-table [tableData]="tableData"></flight-cmd-general-ledger-table>
+               <div class="table-wrapper">
+                    <flight-cmd-general-ledger-table [tableData]="tableData" [activeUrl]="activeUrl"></flight-cmd-general-ledger-table>
                 </div>
              </div>
            </div>

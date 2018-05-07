@@ -1,0 +1,4 @@
+[
+  { "paymentStatus": "New", "paymentDate": "05/21/2011", "merchant": "Meridian", "description": "Text goes here", "paymentAmount": "$-20,507.00"},
+  { "paymentStatus": "Funded", "paymentDate": "04/04/2016", "merchant": "Meridian", "description": "Sample text", "paymentAmount": "$-35,857.00"}
+]

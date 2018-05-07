@@ -1,13 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { AppServices } from '../../services/http/app.services';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { AppServices } from '../../../services/http/app.services';
 import { HttpErrorResponse } from '@angular/common/http/src/response';
+import { TabsetComponent } from 'ng-mdb-pro/pro/tabs-pills/tabset.component';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'flight-cmd-payments-info',
   templateUrl: './payments-info.component.html',
-  styleUrls: ['./payments-info.component.scss']
+  styleUrls: ['./payments-info.component.scss'],
+  //encapsulation: ViewEncapsulation.None
 })
 export class PaymentsInfoComponent implements OnInit {
+  @ViewChild('staticTabs') staticTabs: TabsetComponent;
+
   optionsSelect: Array<any>;
   tableData: any;
   sortDirection = "asc";
@@ -16,41 +22,107 @@ export class PaymentsInfoComponent implements OnInit {
   search: string;
   model: string;
   model1: any;
-  tripDetail= { "confirm": 1 , "completed": 4 , "cancelled": 10  };
+  activeUrl: string;
+  tripDetail= { "confirm": 5 , "completed": 5 , "cancelled": 5  };
 
   cardData: any = [
-    { title: "Account Balance" , percent: 25 , value: "$200,000" , icon: "fa fa-money" },
+    { title: "Account Balance" , percent: 25 , value: "$200,000" , icon: "fas fa-dollar-sign" },
   ];
   paymentDetail = {
     paymentacc: "#0001" , BBVAacc: "01239" , BBVATypeChecking: "Checking"
   };
-  constructor(private appServices: AppServices) { }
+  constructor(private appServices: AppServices, private router: Router) { }
 
   ngOnInit() {
     let arr = [];
     this.optionsSelect = [
-            { value: '1', label: 'Option 1' },
-            { value: '2', label: 'Option 2' },
-            { value: '3', label: 'Option 3' },
+            { value: '1', label: '318953' },
+            { value: '2', label: '318954' },
+            { value: '3', label: '318956' },
         ];
-    this.appServices.getTransactionData().subscribe(
-      data => {
-         this.tableData = data.map((value)=> {
-          value['toggle']=false;
-          for (let key in value) {
+    this.staticTabs.tabs[0].active=true;
+    this.activeUrl = this.router.url;
+    if(this.router.url === "/admin/confirmed-trip") {
+      this.staticTabs.tabs[0].active=true;
+      this.appServices.getConfirmedTransactionData().subscribe(
+        data => {
+           this.tableData = data.map((value)=> {
+            value['toggle']=false;
+            for (let key in value) {
 
-            if(value[key]== '' && key != "toggle") {
-              console.log(key);
-              value[key]="-";
+              if(value[key]== '' && key != "toggle") {
+                value[key]="-";
+              }
             }
-          }
-          return value;
-        });
-      },
-      (err: HttpErrorResponse) => {
-        console.log (err);
-      }
-    );
+            return value;
+          });
+        },
+        (err: HttpErrorResponse) => {
+          console.log (err);
+        }
+      );
+    }  else if (this.router.url === "/admin/completed-trip") {
+      this.staticTabs.tabs[1].active=true;
+      this.appServices.getCompletedTransactionData().subscribe(
+        data => {
+           this.tableData = data.map((value)=> {
+            value['toggle']=false;
+            for (let key in value) {
+
+              if(value[key]== '' && key != "toggle") {
+                value[key]="-";
+              }
+            }
+            return value;
+          });
+        },
+        (err: HttpErrorResponse) => {
+          console.log (err);
+        }
+      );
+    } else if(this.router.url === "/admin/cancelled-trip") {
+      this.staticTabs.tabs[2].active=true;
+      this.appServices.getCancelledTransactionData().subscribe(
+        data => {
+           this.tableData = data.map((value)=> {
+            value['toggle']=false;
+            for (let key in value) {
+
+              if(value[key]== '' && key != "toggle") {
+                console.log(key);
+                value[key]="-";
+              }
+            }
+            return value;
+          });
+        },
+        (err: HttpErrorResponse) => {
+          console.log (err);
+        }
+      );
+    } else {
+      this.staticTabs.tabs[3].active=true;
+      this.appServices.getGeneralLedgerTransactionData().subscribe(
+        data => {
+           this.tableData = data.map((value)=> {
+            value['toggle']=false;
+            for (let key in value) {
+
+              if(value[key]== '' && key != "toggle") {
+                console.log(key);
+                value[key]="-";
+              }
+            }
+            return value;
+          });
+        },
+        (err: HttpErrorResponse) => {
+          console.log (err);
+        }
+      );
+    }
+
+
   }
   sortData(key) {
     this.tableData.sort((a: any, b: any): any => {
@@ -62,6 +134,10 @@ export class PaymentsInfoComponent implements OnInit {
     else {
       this.sortDirection = "asc";
     }
+  }
+
+  changeTab(tabIndex) {
+    this.router.navigate(['/admin/'+tabIndex]);
   }
 
 }

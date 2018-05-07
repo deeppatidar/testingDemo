@@ -18,11 +18,13 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AdminLayoutComponent } from './components/container/admin/admin-layout.component';
 import { PaymentsInfoComponent } from './components/featured/admin/payments-info.component';
 
+import { AppNavMenuComponent } from './components/featured/app-nav-menu/app-nav-menu.component';
+
 import { AppLayoutComponent } from './components/container/app/app-layout.component';
 import { PaymentInfoComponent } from './components/featured/broker/payment-info.component';
 
-import { AppServices } from './components/services/http/app.services';
-import { FilterPipe } from './components/pipes/filter.pipe';
+import { AppServices } from './services/http/app.services';
+import { FilterPipe } from './pipes/filter.pipe';
 
 //shared-components
 import { CardComponent } from './components/shared/card/card.component';
@@ -51,6 +53,7 @@ export function getJwtToken(): string {
     CounterComponent,
     FetchDataComponent,
     AdminLayoutComponent,
+    AppNavMenuComponent,
     PaymentsInfoComponent,
     CardComponent,
     TableComponent,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AppServices } from '../../services/http/app.services';
+import { AppServices } from '../../../services/http/app.services';
 import { HttpErrorResponse } from '@angular/common/http/src/response';
 
 @Component({
@@ -8,7 +8,6 @@ import { HttpErrorResponse } from '@angular/common/http/src/response';
   styleUrls: ['./payment-info.component.scss']
 })
 export class PaymentInfoComponent implements OnInit {
-  optionsSelect: Array<any>;
   tableData: any;
   sortDirection = "asc";
   startDate: any;
@@ -19,9 +18,9 @@ export class PaymentInfoComponent implements OnInit {
   tripDetail= { "confirm": 1 , "completed": 4 , "cancelled": 10  };
 
   cardData: any = [
-    { title: "Account Balance" , percent: 25 , value: "$200,000" , icon: "fa fa-money" },
-    { title: "Pending" , percent: 25 , value: "$200,000" , icon: "fa fa-money" },
-    { title: "Current Balance" , percent: 25 , value: "$200,000" , icon: "fa fa-money" },
+    { title: "Available Balance" , percent: 25 , value: "$200,000" , icon: "fa fa-money" },
+    { title: "Pending" , percent: 25 , value: "$20,000" , icon: "fa fa-money" },
+    { title: "Current Balance" , percent: 25 , value: "$220,000" , icon: "fa fa-money" },
   ];
   paymentDetail = {
     paymentacc: "#0001" , BBVAacc: "01239" , BBVATypeChecking: "Checking"
@@ -30,11 +29,6 @@ export class PaymentInfoComponent implements OnInit {
 
   ngOnInit() {
     let arr = [];
-    this.optionsSelect = [
-            { value: '1', label: 'Option 1' },
-            { value: '2', label: 'Option 2' },
-            { value: '3', label: 'Option 3' },
-        ];
     this.appServices.getBrokerBankActivityData().subscribe(
       data => {
          this.tableData = data.map((value)=> {

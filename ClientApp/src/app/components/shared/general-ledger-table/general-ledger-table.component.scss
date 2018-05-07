@@ -30,10 +30,11 @@
     background: rgba(0, 0, 0, 0.075);
   }
   .collapse-data {
-    @include tablepadding;
     margin-left: 0px;
     margin-right: 0px;
     border-bottom: 1px solid #dee2e6;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 // .sky-button {
