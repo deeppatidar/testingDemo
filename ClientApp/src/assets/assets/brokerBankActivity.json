@@ -1,7 +1,0 @@
-[
-  { "paymentStatus": "Funded", "paymentDate": "05/21/2011", "merchant": "Meridian", "description": "Text goes here",  "paymentAmount": "$-35,875.00",
-  "detail": [
-    {"start": "05/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "5.05" , "actualHrs": "New"},
-    {"start": "06/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": "New"}
-    ]}
-]

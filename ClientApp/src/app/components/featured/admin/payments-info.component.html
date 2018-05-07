@@ -12,7 +12,7 @@
            <div class="row">
              <div class="col-12">
                <div class="table-wrapper">
-                  <app-transaction-table [tableData]="tableData"></app-transaction-table>
+                  <app-transaction-table [tableData]="tableData" [optionsSelect]="optionsSelect"></app-transaction-table>
                 </div>
               </div>
            </div>
@@ -20,25 +20,25 @@
          <mdb-tab heading="Completed({{tripDetail.completed}})">
            <div class="row">
              <div class="col-12">
-               <div class="px-2 table-wrapper">
-                  <app-transaction-table [tableData]="tableData"></app-transaction-table>
+               <div class="table-wrapper">
+                  <app-transaction-table [tableData]="tableData" [optionsSelect]="optionsSelect"></app-transaction-table>
                 </div>
              </div>
            </div>
          </mdb-tab>
-         <mdb-tab heading="Cancelled({{tripDetail.completed}})">
+         <mdb-tab heading="Cancelled({{tripDetail.cancelled}})" routerLink="active" routerLink="/cancelled-trip">
            <div class="row">
              <div class="col-12">
-               <div class="px-2 table-wrapper">
-                  <app-transaction-table [tableData]="tableData"></app-transaction-table>
+               <div class="table-wrapper">
+                  <app-transaction-table [tableData]="tableData" [optionsSelect]="optionsSelect"></app-transaction-table>
                 </div>
              </div>
            </div>
          </mdb-tab>
-         <mdb-tab heading="General Ledger">
+         <mdb-tab heading="General Ledger" routerLink="active" routerLink="/general-ledger">
            <div class="row">
              <div class="col-12">
-               <div class="px-2 table-wrapper">
+               <div class="table-wrapper">
                     <flight-cmd-general-ledger-table [tableData]="tableData"></flight-cmd-general-ledger-table>
                 </div>
              </div>

@@ -8,6 +8,7 @@ import { Component, OnInit , Input} from '@angular/core';
 export class TransactionTableComponent implements OnInit {
   @Input() tableData : Array<any>;
   @Input() search : any;
+  @Input() optionsSelect : Array<any>
   sortDirection = "asc";
   constructor() {
 

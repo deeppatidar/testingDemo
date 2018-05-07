@@ -20,6 +20,26 @@ export class AppServices {
     return this.http.get(url);
   };
 
+  public getConfirmedTransactionData(): Observable<any> {
+    const url = '../../../assets/transactiontabledata.json';
+    return this.http.get(url);
+  };
+
+  public getCompletedTransactionData(): Observable<any> {
+    const url = '../../../assets/transactiontabledata.json';
+    return this.http.get(url);
+  };
+
+  public getCancelledTransactionData(): Observable<any> {
+    const url = '../../../assets/transactiontabledata.json';
+    return this.http.get(url);
+  };
+
+  public getGeneralLedgerTransactionData(): Observable<any> {
+    const url = '../../../assets/transactiontabledata.json';
+    return this.http.get(url);
+  };
+
   public getBrokerBankActivityData(): Observable<any> {
     const url = '../../../assets/brokerBankActivity.json';
     return this.http.get(url);

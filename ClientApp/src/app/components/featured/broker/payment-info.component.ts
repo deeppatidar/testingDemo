@@ -8,7 +8,6 @@ import { HttpErrorResponse } from '@angular/common/http/src/response';
   styleUrls: ['./payment-info.component.scss']
 })
 export class PaymentInfoComponent implements OnInit {
-  optionsSelect: Array<any>;
   tableData: any;
   sortDirection = "asc";
   startDate: any;
@@ -30,11 +29,6 @@ export class PaymentInfoComponent implements OnInit {
 
   ngOnInit() {
     let arr = [];
-    this.optionsSelect = [
-            { value: '1', label: 'Option 1' },
-            { value: '2', label: 'Option 2' },
-            { value: '3', label: 'Option 3' },
-        ];
     this.appServices.getBrokerBankActivityData().subscribe(
       data => {
          this.tableData = data.map((value)=> {

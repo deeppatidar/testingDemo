@@ -1,6 +1,6 @@
 <div class="container-fluid tabs tran-table card">
   <div class="row table-heading">
-      <div class="col icon">
+      <div class="col-sm-1 icon">
         <div class="heading">
         </div>
       </div>
@@ -31,13 +31,13 @@
       </div>
   </div>
   <div class="table-content">
-    <div *ngFor="let rowData of tableData" (click)="toggle(rowData)">
+    <div *ngFor="let rowData of tableData">
       <div class="row table-data waves-light">
-        <div class="col icon">
+        <div class="col-sm-1 icon" (click)="toggle(rowData)">
           <i *ngIf="rowData.toggle" class="fa fa-minus"></i>
           <i *ngIf="!rowData.toggle" class="fa fa-plus"></i>
         </div>
-        <div class="col" (click)="form.show()">
+        <div class="col">
           {{rowData.paymentStatus}}
         </div>
         <div class="col">
@@ -87,62 +87,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div mdbModal #form="mdb-modal" class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <!--Content-->
-        <div class="modal-content">
-
-            <!--Header-->
-            <div class="modal-header">
-                     <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
-                         <span aria-hidden="true">×</span>
-                     </button>
-                     <h4 class="modal-title w-100" id="myModalLabel">Confirmed Trip Payment</h4>
-                 </div>
-            <!--Body-->
-            <div class="modal-body mb-0">
-
-                <div class="md-form form-sm">
-                    <div for="form21"><strong>Broker</strong></div>
-                    <div for="form21">Sentient Jet</div>
-                </div>
-                <div class="md-form form-sm">
-                    <div for="form21"><strong>Operator</strong></div>
-                    <div for="form21">Sliverhawk Aviation</div>
-                </div>
-                <div class="md-form form-sm">
-                  <div for="form21"><strong>Trip #</strong></div>
-                  <mdb-select [options]="optionsSelect" ></mdb-select>
-                </div>
-                <br>
-                <div class="md-form form-sm">
-                  <div for="form21"><strong>Quote Amount</strong></div>
-                  <input mdbInputDirective type="text" id="form21" class="form-control">
-                </div>
-
-                <div class="md-form form-sm">
-                  <div for="form21"><strong>Additional Amount</strong></div>
-                  <input mdbInputDirective type="text" id="form21" class="form-control">
-                </div>
-
-                <div class="md-form form-sm">
-                  <div for="form21"><strong>Total Amount</strong></div>
-                  <div for="form21">$36,857.00</div>
-                </div>
-
-                <div class="md-form form-sm">
-                    <div for="form21"><strong>Notes</strong></div>
-                    <textarea mdbInputDirective type="text" id="form8" class="md-textarea mb-0"></textarea>
-                </div>
-                <span style="color: lightgrey; font-size:16px; margin-left: 10px;">Money will be moved from Broker's account to stagin Account</span>
-                <div class="text-center mt-1-half">
-                    <button class="btn blue-gradient mb-2 waves-light" mdbWavesEffect style="width:100%;">Fund Trip</button>
-                </div>
-
-            </div>
-        </div>
-        <!--/.Content-->
-    </div>
 </div>
