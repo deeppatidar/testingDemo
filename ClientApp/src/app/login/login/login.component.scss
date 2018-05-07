@@ -1,0 +1,45 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+#loginPanelWrapper {
+    background: url(/assets/images/login_background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    min-height: 700px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    .login-font-small {
+        font-size: .8rem;
+    }
+}
+
+.invisible {
+    opacity: 0;
+}
+
+@include media-breakpoint-up(xs) {
+    #loginPanelLogo {
+        width: 180px;
+        margin: 20px auto 20px auto;
+    }
+    header {
+        text-align: center;
+    }
+    .btn {
+        @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #loginPanelLogo {
+        width: 230px;
+        margin: 40px 0 0 80px;
+    }
+    header {
+        text-align: left;
+    }
+}

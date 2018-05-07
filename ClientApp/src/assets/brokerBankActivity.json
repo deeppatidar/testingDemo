@@ -1,0 +1,12 @@
+[
+  { "paymentStatus": "New", "paymentDate": "05/21/2011", "merchant": "Meridian", "description": "text goes here", "paymentAmount": "New" ,
+  "detail": [
+    {"start": "05/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "5.05" , "actualHrs": "New"},
+    {"start": "06/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": "New"}
+    ]},
+  { "paymentStatus": "Funded", "paymentDate": "05/01/2011", "merchant": "Meridian", "description": "text goes here", "paymentAmount": "New" ,
+  "detail": [
+    {"start": "05/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "5.05" , "actualHrs": "New"},
+    {"start": "06/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": "New"}
+    ]}
+]

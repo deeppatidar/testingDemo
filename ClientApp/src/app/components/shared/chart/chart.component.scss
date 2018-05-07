@@ -1,0 +1,24 @@
+@media screen and (min-width: 767px) {
+  .chart {
+    top: -25px;
+    right: 25px;
+  }
+}
+
+.admin-up {
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: -20px;
+  .card-text {
+      padding: 10px 18px;
+      font-size: 15px;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      border-radius: 3px;
+      -webkit-box-shadow: 0 2px 9px 0 rgba(0,0,0,.2),0 2px 13px 0 rgba(0,0,0,.19);
+      box-shadow: 0 2px 9px 0 rgba(0,0,0,.2),0 2px 13px 0 rgba(0,0,0,.19);
+      margin-bottom: 25px;
+
+  }
+}

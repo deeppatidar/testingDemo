@@ -1,0 +1,15 @@
+[
+  { "paymentStatus": "New", "tripDate": "05/21/2011", "operator": "Meridian", "tripId": "#1111", "payment": "New", "estimatedHrs": "4.05", "actualHrs": "4.50" , "paymentAmount": "New" ,
+  "detail": [
+    {"start": "05/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "5.05" , "actualHrs": "New"},
+    {"start": "06/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": "New"}
+    ]},
+  { "paymentStatus": "Funded", "tripDate": "06/21/2011", "operator": "Meridian", "tripId": "#317849", "payment": "New", "estimatedHrs": "4.05", "actualHrs": "4.50" , "paymentAmount": "4500" , "detail": [
+    {"start": "05/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "5.05" , "actualHrs": "New"},
+    {"start": "06/06/21" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": "New"}
+    ]},
+  { "paymentStatus": "New", "tripDate": "07/21/2011", "operator": "Meridian", "tripId": "#317849", "payment": "", "estimatedHrs": "4.05", "actualHrs": "4.50" , "paymentAmount": "New"},
+  { "paymentStatus": "Funded", "tripDate": "08/21/2011", "operator": "Meridian", "tripId": "#317849", "payment": "New", "estimatedHrs": "4.05", "actualHrs": "4.50" , "paymentAmount": "4500"},
+  { "paymentStatus": "New", "tripDate": "09/21/2011", "operator": "Meridian", "tripId": "#317849", "payment": "New", "estimatedHrs": "4.05", "actualHrs": "4.50" , "paymentAmount": "New"}
+
+]

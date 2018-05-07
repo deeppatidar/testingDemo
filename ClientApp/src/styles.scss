@@ -1,0 +1,156 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body,html {
+   height: 100%;
+}
+.nav-item active {
+  color: black;
+}
+.pills-secondary .nav-item .nav-link {
+  background-color: lightgrey !important;
+  &.active {
+      background-color: white !important;
+  }
+}
+mdb-tabset .white .active {
+  color: black!important;
+  font-weight: 500;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 0;
+  // border-top-left-radius: 5px;
+  //  border-top-right-radius: 5px;
+  box-shadow: none!important;
+  background: none!important;
+}
+.nav-tabs {
+  padding-bottom: 0px;
+}
+.pills-secondary {
+  .nav-item {
+    border: 1px solid lightgrey;
+    flex-grow: 0.2!important;
+  }
+}
+mdb-tabset .margin li {
+    margin: 0em !important;
+}
+
+
+.nav-tabs {
+  overflow-y: initial!important;
+    border-bottom: 1px solid #dee2e6;
+    background: none;
+    box-shadow: none;
+    padding-bottom: 0px;
+      .nav-link {
+      border: none;
+      border-top-left-radius: 0rem;
+      border-top-right-radius: 0rem;
+  }
+}
+
+.nav-tabs .nav-item {
+    margin-bottom: -1px!important;
+}
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+@media screen and(max-width:768px) {
+  .nav-link {
+      padding: 0.4rem 0px;
+
+  }
+
+  .nav-tabs {
+    padding: 0px;
+  }
+}
+.nav-item:hover .nav-link{
+  padding-bottom: 9px;
+}
+
+.nav-tabs .nav-item.show .nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #fff;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-radius: 0px;
+}
+
+li {
+//  display: inline-block;
+}
+.nav-tabs>li.active>a {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.picker .picker__frame {
+  min-height: 420px;
+}
+.picker__date-display {
+  display: none;
+}
+.picker__header {
+  margin-top: 30px;
+}
+mdb-select {
+  height: 16px;
+}
+
+.collapse {
+    &.show {
+      height: 200px !important;
+    }
+}
+tabs {
+  &.card {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+  }
+  &.tran-table {
+
+  }
+}
+
+.card {
+  .table-heading {
+    .heading {
+      font-weight: 200 !important;
+    }
+  }
+  .table-data {
+    font-weight: 200 !important;
+  }
+  .accordian-content {
+    background: rgba(0, 0, 0, 0)!important;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1px;
+    .collapse-data {
+      border: 1px solid lightgrey;
+    }
+  }
+  .accordian-heading {
+    background: rgba(0, 0, 0, 0.075)!important;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1px;
+  }
+}
+.transaction-table {
+  &.fa {
+    font-size: 15px !important;
+  }
+}
+
+.margin-l {
+  margin-left: 20px;
+}
+
+.modal-open .modal {
+
+overflow-y: auto;
+
+}

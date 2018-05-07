@@ -1,0 +1,8 @@
+[
+  { "tripId": "101", "date": "05/21/2011", "type": "Accepted", "name": "Truner Flight", "status": "Completed", "amount": "$5000 USD", "view": "detail"},
+  { "tripId": "102", "date": "05/23/2017", "type": "Completed", "name": "Truner Flight", "status": "Completed", "amount": "$5000 USD", "view": "detail"},
+  { "tripId": "103", "date": "10/25/2016", "type": "Refunded", "name": "Acme Aviation", "status": "Pending", "amount": "$1000 USD", "view": "detail"},
+  { "tripId": "104", "date": "10/28/2016", "type": "Pending", "name": "Axme Aviation", "status": "Pending", "amount": "$2000 USD", "view": "detail"},
+  { "tripId": "105", "date": "10/25/2016", "type": "Refunded", "name": "Dcmy Aviation", "status": "Pending", "amount": "$300 USD", "view": "detail"},
+  { "tripId": "106", "date": "10/01/2016", "type": "Completed", "name": "Kethi Washington", "status": "Pending", "amount": "$800 USD", "view": "detail"}
+]

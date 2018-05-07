@@ -1,0 +1,228 @@
+<header>
+    <!-- Sidebar navigation -->
+    <mdb-sidenav #sidenav class="sn-bg-4 fixed mdb-sidenav" [fixed]="true">
+
+        <logo routerLink="/">
+            <li>
+                <div class="logo-wrapper waves-light mb-5">
+                    <a href="#">
+                        <img src="http://cdn.sentient.com/fcc/images/operator_logo.png" class="img-fluid flex-center">
+                    </a>
+                </div>
+            </li>
+            <!--/. Logo -->
+        </logo>
+
+        <links>
+            <!--Search Form-->
+            <li>
+                <form class="search-form" role="search">
+                    <div class="form-group md-form mt-0 pt-1 waves-light waves-effect waves-light" mdbRippleRadius>
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+            </li>
+            <!--/.Search Form-->
+            <!-- Side navigation links -->
+            <li>
+                <ul class="collapsible collapsible-accordion">
+                    <mdb-squeezebox [multiple]="false" aria-multiselectable="false">
+
+                        <!-- Collapsible link -->
+                        <mdb-item>
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-check-circle"></i> Tasks</mdb-item-head>
+                            <mdb-item-body>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 2</a>
+                                    </li>
+                                </ul>
+                            </mdb-item-body>
+                        </mdb-item>
+
+                        <mdb-item>
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-calculator"></i> Quoting</mdb-item-head>
+                            <mdb-item-body>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 2</a>
+                                    </li>
+                                </ul>
+                            </mdb-item-body>
+                        </mdb-item>
+
+                        <mdb-item>
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-calendar"></i> Aircraft Schedule</mdb-item-head>
+                            <mdb-item-body>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 2</a>
+                                    </li>
+                                </ul>
+                            </mdb-item-body>
+                        </mdb-item>
+
+                        <mdb-item>
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-users"></i> Crew Schedule</mdb-item-head>
+                            <mdb-item-body>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 2</a>
+                                    </li>
+                                </ul>
+                            </mdb-item-body>
+                        </mdb-item>
+
+                        <mdb-item>
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-money"></i> Bank Account</mdb-item-head>
+                            <mdb-item-body>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 2</a>
+                                    </li>
+                                </ul>
+                            </mdb-item-body>
+                        </mdb-item>
+
+                        <mdb-item class="no-collase">
+                            <!-- <mdb-item-head (click)="sidenav.toggle()" routerLink="/trips" mdbRippleRadius> -->
+                            <mdb-item-head routerLink="/trips" mdbRippleRadius>
+                                <!-- <a routerLink="/trips"><i class="fa fa-diamond"></i> Simple link 2</a> -->
+                                <i class="fa fa-exchange"></i> Trips
+                            </mdb-item-head>
+                            <mdb-item-body></mdb-item-body>
+                        </mdb-item>
+
+                        <mdb-item>
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-map"></i> Airport Directory</mdb-item-head>
+                            <mdb-item-body>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 2</a>
+                                    </li>
+                                </ul>
+                            </mdb-item-body>
+                        </mdb-item>
+
+                        <mdb-item>
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-flag"></i> Aircraft Directory</mdb-item-head>
+                            <mdb-item-body>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 2</a>
+                                    </li>
+                                </ul>
+                            </mdb-item-body>
+                        </mdb-item>
+
+                        <mdb-item>
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-plane"></i> My Fleet</mdb-item-head>
+                            <mdb-item-body>
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect" mdbRippleRadius>Link 2</a>
+                                    </li>
+                                </ul>
+                            </mdb-item-body>
+                        </mdb-item>
+
+                        <!-- Simple link -->
+                        <!-- <mdb-item class="no-collase">
+                            <mdb-item-head mdbRippleRadius>
+                                <i class="fa fa-diamond"></i> Simple link 2</mdb-item-head>
+                            <mdb-item-body></mdb-item-body>
+                        </mdb-item> -->
+
+                    </mdb-squeezebox>
+                </ul>
+            </li>
+            <!--/. Side navigation links -->
+        </links>
+        <div class="sidenav-bg mask-strong"></div>
+    </mdb-sidenav>
+    <!--/. Sidebar navigation -->
+
+    <!-- Navbar -->
+    <mdb-navbar SideClass="navbar navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" [containerInside]="false">
+
+        <navlinks class="navbar-container">
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a (click)="sidenav.show()" class="button-collapse-non-fixed">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <!--/. SideNav slide-out button -->
+        </navlinks>
+
+        <logo>
+            <!-- Breadcrumb-->
+            <div class="breadcrumbs breadcrumb-dn mr-auto">
+                <p>{{titleService.getTitle()}}</p>
+            </div>
+            <!--/. Breadcrumb-->
+        </logo>
+
+        <navlinks>
+            <ul class="nav navbar-nav nav-flex-icons ml-auto ie-double-nav">
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbRippleRadius>
+                        <i class="fa fa-envelope"></i>
+                        <span class="clearfix d-none d-sm-inline-block">Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link waves-light" mdbRippleRadius>
+                        <i class="fa fa-comments-o"></i>
+                        <span class="clearfix d-none d-sm-inline-block">Support</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown btn-group" dropdown>
+                    <a dropdownToggle type="button" class="nav-link dropdown-toggle waves-light" mdbRippleRadius>
+                        <i class="fa fa-user"></i>
+                        John Doe
+                    </a>
+                    <div class="dropdown-menu dropdown-primary dropdown-menu-right" role="menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </navlinks>
+    </mdb-navbar>
+    <!--/. Navbar -->
+
+</header>

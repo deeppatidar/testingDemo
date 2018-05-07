@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row margin-l">
+    <div class="x-small col-sm-3 col-xs-2" *ngFor="let card of cardData">
+      <app-card [cardTitle]="card.title" [progressPercent]="" [cardValue]="card.value" [cardIcon]=""></app-card>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-12">
+      <mdb-tabset #staticTabs [buttonClass]="'nav-tabs tabs-4 pills-secondary white margin'" [contentClass]="''">
+         <mdb-tab heading="Bank Activity">
+           <div class="row">
+             <div class="col-12">
+               <div class="table-wrapper">
+                  <flight-cmd-broker-table [tableData]="tableData" [optionsSelect]="optionsSelect"></flight-cmd-broker-table>
+                </div>
+              </div>
+           </div>
+         </mdb-tab>
+       </mdb-tabset>
+    </div>
+  </div>
+</div>

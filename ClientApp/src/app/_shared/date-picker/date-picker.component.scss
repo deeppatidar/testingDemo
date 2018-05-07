@@ -1,0 +1,14 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+.md-form.flight-cmd-date-picker {
+    width: auto;
+    .calendar-icon {
+        margin-left: -20%;
+        color: $gray-600;
+    }
+    input.form-control.mydp-date {
+        padding-bottom: 0;
+        width: 140px;
+    }
+}

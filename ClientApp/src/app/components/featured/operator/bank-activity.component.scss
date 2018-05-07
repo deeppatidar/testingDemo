@@ -1,0 +1,54 @@
+.table-wrapper {
+    display: block;
+    //max-height: 300px;
+    //overflow-y: auto;
+    //margin-top: -12px;
+    border-top: none !important;
+    border: 1px solid lightgrey;
+    margin-top: -20px;
+    // padding-left: 0px !important;
+    // padding-right: 0px !important;
+}
+.sky-table {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+@mixin tablepadding {
+  padding-top: 1.1rem;
+  padding-bottom: 1rem;
+  //padding: 0px 5px 0px 5px;
+}
+.card {
+  .table-heading {
+    border-bottom: 2px solid #dee2e6;
+    .heading {
+      font-size: 1rem;
+      font-weight: 500;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+  .table-data  {
+    @include tablepadding;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 300;
+  }
+  .table-data:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+
+  i {
+    font-weight: 800;
+  }
+  .accordian-content {
+    margin-left: 7%;
+    background: rgba(0, 0, 0, 0.075);
+  }
+  .collapse-data {
+    @include tablepadding;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-bottom: 1px solid #dee2e6;
+  }
+}

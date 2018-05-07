@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <div class="card">
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="admin-up">
+            <div class="col-sm-12">
+              <p class="primary-color card-text">Sales</p>
+            </div>
+          <div class="row">
+            <div class="col-sm-7">
+              <p class="primary-color card-text col-sm-9">Data Range</p>
+              <mdb-select [options]="optionsSelect" placeholder="Choose your option"></mdb-select>
+              <p class="primary-color card-text mt-4">Custom range</p>
+              <div class="md-form">
+                <input type="text" class="form-control" mdbActive>
+                <label for="startDate">Start Date</label>
+              </div>
+              <div class="md-form">
+                <input type="text" class="form-control" mdbActive>
+                <label for="email">End Date</label>
+              </div>
+            </div>
+            <div class="col-sm-5 text-center">
+              <p>Total Sales: </p>
+              <h4 ><strong >$34000</strong></h4>
+              Chart
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-7">
+        <div class="card chart">
+          <div class="container-fluid">
+            <div style="display: block">
+              <canvas mdbChart
+                width="500" height="300"
+                [chartType]="chartType"
+                [datasets]="chartDatasets"
+                [labels]="chartLabels"
+                [colors]="chartColors"
+                [options]="chartOptions"
+                [legend]="true"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

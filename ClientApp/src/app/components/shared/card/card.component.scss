@@ -1,0 +1,29 @@
+
+.cascading-admin-card {
+  .admin-up {
+      margin-left: 4%;
+      margin-right: 4%;
+      margin-top: -20px;
+      .data {
+        float: right;
+        margin-top: 2rem;
+        text-align: right;
+      }
+    .fa-icon {
+        padding: 1.7rem;
+        font-size: 2rem;
+        color: #fff;
+        text-align: left;
+        margin-right: 1rem;
+        border-radius: 3px;
+        -webkit-box-shadow: 0 2px 9px 0 rgba(0,0,0,.2),0 2px 13px 0 rgba(0,0,0,.19);
+        box-shadow: 0 2px 9px 0 rgba(0,0,0,.2),0 2px 13px 0 rgba(0,0,0,.19);
+    }
+  }
+  .data {
+
+  }
+  .c-data {
+    margin-top: 2rem;    
+  }
+}

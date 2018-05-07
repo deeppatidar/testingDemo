@@ -1,0 +1,25 @@
+<table class="table table-hover mb-0">
+  <thead>
+    <tr>
+      <th><a (click)="sortData('tripId')">Trip ID <i class="fa fa-sort ml-1"></i></a></th>
+      <th><a (click)="sortData('date')">Date <i class="fa fa-sort ml-1"></i></a></th>
+      <th class="th-lg"><a (click)="sortData('type')">Type<i class="fa fa-sort ml-1" ></i></a></th>
+      <th class="th-lg"><a (click)="sortData('name')">Name<i class="fa fa-sort ml-1"></i></a></th>
+      <th class="th-lg"><a (click)="sortData('status')">Status<i class="fa fa-sort ml-1"></i></a></th>
+      <th class="th-lg"><a  (click)="sortData('amount')">Amount<i class="fa fa-sort ml-1"></i></a></th>
+      <th class="th-lg">View</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor= "let rowData of tableData | filter: search">
+      <th scope="row">{{rowData.tripId}}</th>
+      <td>{{rowData.date}}</td>
+      <td><button type="button" class="btn sky-button" [ngClass]="rowData.type === 'Accepted' ? 'btn-success' : rowData.type === 'Completed' ? 'btn-primary' : rowData.type === 'Refunded' ? 'btn-warning' : 'btn-danger' ">{{rowData.type}}</button></td>
+      <td>{{rowData.name}}</td>
+      <td [ngClass]="rowData.status === 'Completed' ? 'completed' : 'pending'">{{rowData.status}}</td>
+      <td>{{rowData.amount}}</td>
+      <td><button type="button" class="btn btn-primary btn-rounded sky-button">Details</button></td>
+      
+    </tr>
+  </tbody>
+</table>
