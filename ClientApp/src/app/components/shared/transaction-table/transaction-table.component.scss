@@ -1,14 +1,14 @@
 @mixin tablepadding {
-  padding-top: 1.1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   //padding: 0px 5px 0px 5px;
 }
 .card {
   .table-heading {
     border-bottom: 2px solid #dee2e6;
     .heading {
-      font-size: 1rem;
-      font-weight: 500;
+      font-size: 15px;
+      font-weight: 400!important;
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     }
@@ -16,29 +16,86 @@
   .table-data  {
     @include tablepadding;
     border-bottom: 2px solid #dee2e6;
+    font-size: 15px;
     font-weight: 300;
   }
   .table-data:hover {
-    background-color: rgba(0, 0, 0, 0.075);
+    //background-color: rgba(0, 0, 0, 0.075);
   }
 
   i {
     font-weight: 800;
   }
   .accordian-content {
-    margin-left: 10%;
-    margin-top: 5px;
+    margin-left: 68px;
+    margin-top: 10px;
     margin-bottom: 5px;
     background: rgba(0, 0, 0, 0.075);
+    width: 91%;
   }
   .collapse-data {
     margin-left: 0px;
     margin-right: 0px;
     border-bottom: 1px solid #dee2e6;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    font-size: 15px;
+    padding: 20px 0px 20px 0px;
+    .accordian-heading{
+      font-size: 15px;
+      line-height: 0px;
+      font-weight: 500;
+    }
   }
 }
+
+.transaction-label-btn {
+  box-shadow: none;
+  padding: 2px 5px;
+  margin: 0px;
+  font-size: 13px;
+}
+.custom-btn {
+  width: 90%;
+  padding: 10px;
+}
+.custom-textarea {
+  height: 25px;
+  //font-size: 15px;
+  width: 98%;
+}
+
+.custom-modal-title {
+  font-size: 20px
+}
+
+.custom-modal-body {
+  font-size: 15px;
+}
+.modal-info {
+  color:grey;
+  font-size:13px;
+  text-align: center;
+}
+.modal-custom-input {
+  font-size: 15px;
+}
+
+.custom-icon {
+  width: 4%;
+  padding-left: 15px;
+  margin-top: 5px;
+}
+.custom-col {
+  width: 7%;
+  padding-right: 1px;
+}
+
+.payment-btn-info {
+  padding: 5px 10px;
+  margin: 0px;
+  font-size: 15px;
+}
+
+.pointer {cursor: pointer;}
 // .sky-button {
 //   height: 35px;
 //   line-height: 12px;

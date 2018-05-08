@@ -43,6 +43,7 @@ mdb-tabset .margin li {
     box-shadow: none;
     padding-bottom: 0px;
       .nav-link {
+      font-size: 18px;
       border: none;
       border-top-left-radius: 0rem;
       border-top-right-radius: 0rem;
@@ -66,9 +67,6 @@ mdb-tabset .margin li {
     padding: 0px;
   }
 }
-.nav-item:hover .nav-link{
-  padding-bottom: 9px;
-}
 
 .nav-tabs .nav-item.show .nav-tabs .nav-link.active {
     color: #495057;
@@ -77,9 +75,6 @@ mdb-tabset .margin li {
     border-radius: 0px;
 }
 
-li {
-//  display: inline-block;
-}
 .nav-tabs>li.active>a {
     background-color: #fff;
     border: 1px solid #ddd;
@@ -96,7 +91,15 @@ li {
   margin-top: 30px;
 }
 mdb-select {
-  height: 16px;
+  //height: 16px;
+  font-size: 15px;
+  .value {
+    font-size: 15px;
+  }
+  .select-option {
+    font-size: 15px !important;
+    padding: 5px !important;
+  }
 }
 
 .collapse {
@@ -139,15 +142,6 @@ tabs {
     line-height: 1px;
   }
 }
-.transaction-table {
-  &.fa {
-    font-size: 15px !important;
-  }
-}
-
-.margin-l {
-  margin-left: 20px;
-}
 
 .modal-open .modal {
 overflow-y: auto;
@@ -156,14 +150,23 @@ overflow-y: auto;
   padding: 15px;
 }
 .md-form {
-  margin-top: 5px;
+  margin-top: 25px;
   texarea {
     &.md-textarea {
       padding: 10px;
     }
+  }
+  label {
+    font-size: 15px !important;
   }
 }
 
 .custom-textarea {
   padding: 5px !important;
 }
+
+// .custom-icon {
+//   width: 5%;
+//   padding-left: 10px;
+//   margin-top: 5px;
+// }

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="row margin-l">
+  <div class="row ml-2">
     <div class="x-small col-sm-3 col-xs-2" *ngFor="let card of cardData">
       <app-card [cardTitle]="card.title" [progressPercent]="" [cardValue]="card.value" [cardIcon]="card.icon"></app-card>
     </div>
@@ -8,7 +8,7 @@
   <div class="row">
     <div class="col-md-12">
       <mdb-tabset #staticTabs [buttonClass]="'nav-tabs tabs-4 pills-secondary white margin'" [contentClass]="''">
-         <mdb-tab heading="Confirmed Trip({{tripDetail.confirm}})" (select)="changeTab('confirmed-trip')">
+         <mdb-tab heading="Confirmed Trips({{tripCounts ? tripCounts.confirmed : ''}})" (select)="changeTab('confirmed-trip')">
            <div class="row">
              <div class="col-12">
                <div class="table-wrapper">
@@ -17,7 +17,7 @@
               </div>
            </div>
          </mdb-tab>
-         <mdb-tab heading="Completed({{tripDetail.completed}})" (select)="changeTab('completed-trip')">
+         <mdb-tab heading="Completed Trips({{tripCounts ? tripCounts.completed : ''}})" (select)="changeTab('completed-trip')">
            <div class="row">
              <div class="col-12">
                <div class="table-wrapper">
@@ -26,7 +26,7 @@
              </div>
            </div>
          </mdb-tab>
-         <mdb-tab heading="Cancelled({{tripDetail.cancelled}})" (select)="changeTab('cancelled-trip')">
+         <mdb-tab heading="Cancelled Trips({{tripCounts ? tripCounts.cancelled : ''}})" (select)="changeTab('cancelled-trip')">
            <div class="row">
              <div class="col-12">
                <div class="table-wrapper">

@@ -1,0 +1,6 @@
+[
+  { "paymentDate": "04/04/2018", "merchant": "Meridian", "description": "text goes here" , "paymentAmount": "35,857.00"},
+  { "paymentDate": "01/04/2018", "merchant": "Meridian", "description": "text goes here" , "paymentAmount": "33,857.00"},
+  { "paymentDate": "05/03/2018", "merchant": "Meridian", "description": "sample text",  "paymentAmount": "35,857.00"},
+  { "paymentDate": "03/02/2018", "merchant": "Meridian",  "description": "sample text", "paymentAmount": "45,00.00"}
+]

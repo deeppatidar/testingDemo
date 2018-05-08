@@ -1,14 +1,14 @@
 @mixin tablepadding {
-  padding-top: 1.1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   //padding: 0px 5px 0px 5px;
 }
 .card {
   .table-heading {
     border-bottom: 2px solid #dee2e6;
     .heading {
-      font-size: 1rem;
-      font-weight: 500;
+      font-size: 15px;
+      font-weight: 500 !important;
       padding-top: 0.5rem;
       padding-bottom: 0.5rem;
     }
@@ -16,6 +16,7 @@
   .table-data  {
     @include tablepadding;
     border-bottom: 2px solid #dee2e6;
+    font-size: 15px;
     font-weight: 300;
   }
   .table-data:hover {
@@ -25,17 +26,13 @@
   i {
     font-weight: 800;
   }
-  .accordian-content {
-    margin-left: 10%;
-    background: rgba(0, 0, 0, 0.075);
-  }
-  .collapse-data {
-    margin-left: 0px;
-    margin-right: 0px;
-    border-bottom: 1px solid #dee2e6;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
+}
+
+.transaction-label-btn {
+  box-shadow: none;
+  font-size: 13px;
+  margin: 0px;
+  padding: 2px 5px;
 }
 // .sky-button {
 //   height: 35px;

@@ -19,9 +19,9 @@ export class BankActivityComponent implements OnInit {
   tripDetail= { "confirm": 1 , "completed": 4 , "cancelled": 10  };
 
   cardData: any = [
-    { title: "Available Balance" , percent: 25 , value: "$180,000" , icon: "fa fa-money" },
-    { title: "Pending" , percent: 25 , value: "$70,000" , icon: "fa fa-money" },
-    { title: "Current Balance" , percent: 25 , value: "$250,000" , icon: "fa fa-money" },
+    { title: "Available Balance" , percent: 25 , value: "$180,000" , icon: "fa fa-usd" },
+    { title: "Pending" , percent: 25 , value: "$70,000" , icon: "fa fa-usd" },
+    { title: "Current Balance" , percent: 25 , value: "$250,000" , icon: "fa fa-usd" },
   ];
   paymentDetail = {
     paymentacc: "#0001" , BBVAacc: "01239" , BBVATypeChecking: "Checking"

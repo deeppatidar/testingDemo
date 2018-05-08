@@ -30,7 +30,9 @@
     <div *ngFor="let rowData of tableData">
       <div class="row table-data waves-light">
         <div class="col">
-        <button type="button" class="btn btn-mdb-color waves-light" mdbWavesEffect style="padding: 5px 10px; margin: 0px;">{{rowData.paymentStatus}}</button>
+          <button *ngIf="rowData.paymentStatus === 'New'" type="button" class="btn btn-outline-primary transaction-label-btn">{{rowData.paymentStatus}}</button>
+          <button *ngIf="rowData.paymentStatus === 'Funded'" type="button" class="btn btn-outline-secondary transaction-label-btn">{{rowData.paymentStatus}}</button>
+          <button *ngIf="rowData.paymentStatus === 'Released'" type="button" class="btn btn-outline-warning transaction-label-btn">{{rowData.paymentStatus}}</button>
         </div>
         <div class="col">
           {{rowData.paymentDate}}
@@ -43,38 +45,6 @@
         </div>
         <div class="col">
           {{rowData.paymentAmount}}
-        </div>
-      </div>
-      <div *ngIf="rowData.toggle" class="accordian-content">
-        <div class="row collapse-data accordian-heading">
-          <div class="col">
-            <div class="">Start</div>
-          </div>
-          <div class="col">
-            <div class="accordian-heading">Tail #</div>
-          </div>
-          <div class="col">
-            <div class="accordian-heading">Origin</div>
-          </div>
-          <div class="col">
-            <div class="accordian-heading">Destination</div>
-          </div>
-          <div class="col">
-            <div class="accordian-heading">Est Hrs.</div>
-          </div>
-          <div class="col">
-            <div class="accordian-heading">Actual Hrs.</div>
-          </div>
-        </div>
-        <div *ngFor="let detail of rowData.detail">
-          <div class="row collapse-data">
-          <div class="col">{{detail.start}}</div>
-          <div class="col">{{detail.tail}}</div>
-          <div class="col">{{detail.origin}}</div>
-          <div class="col">{{detail.destination}}</div>
-          <div class="col">{{detail.estimatedHrs}}</div>
-          <div class="col">{{detail.activeHrs}}</div>
-          </div>
         </div>
       </div>
     </div>

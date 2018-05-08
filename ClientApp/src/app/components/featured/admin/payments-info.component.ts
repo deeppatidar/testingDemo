@@ -23,10 +23,10 @@ export class PaymentsInfoComponent implements OnInit {
   model: string;
   model1: any;
   activeUrl: string;
-  tripDetail= { "confirm": 5 , "completed": 5 , "cancelled": 5  };
+  tripCounts: any;
 
   cardData: any = [
-    { title: "Account Balance" , percent: 25 , value: "$200,000" , icon: "fas fa-dollar-sign" },
+    { title: "Account Balance" , percent: 25 , value: "$200,000" , icon: "fa fa-usd" },
   ];
   paymentDetail = {
     paymentacc: "#0001" , BBVAacc: "01239" , BBVATypeChecking: "Checking"
@@ -42,6 +42,17 @@ export class PaymentsInfoComponent implements OnInit {
         ];
     this.staticTabs.tabs[0].active=true;
     this.activeUrl = this.router.url;
+
+
+    this.appServices.getTripCount().subscribe(
+      data => {
+          this.tripCounts = data;
+      },
+      (err: HttpErrorResponse) => {
+        console.log (err);
+      }
+    );
+
     if(this.router.url === "/admin/confirmed-trip") {
       this.staticTabs.tabs[0].active=true;
       this.appServices.getConfirmedTransactionData().subscribe(
