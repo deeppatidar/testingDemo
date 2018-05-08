@@ -1,18 +1,18 @@
 [
-  { "paymentStatus": "New", "tripDate": "05/06/2018", "operator": "Meridian", "tripId": "307359", "payment": "", "estimatedHrs": "4.05", "actualHrs": "4.10" , "paymentAmount": "35,857.00" ,
+  { "paymentStatus": "New", "tripDate": "05/07/2018", "operator": "Meridian", "tripId": "30101", "payment": "", "estimatedHrs": "4.05", "actualHrs": "" , "paymentAmount": "30850.00" ,  "totalAmount": "30850.00",
   "detail": [
-    {"start": "25/05/18:15:48" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": "4.10"},
-    {"start": "26/05/18:17:30" , "tail": "NOO3XJ" , "origin": "PSP" , "destination": "PWK" , "estimatedHrs": "3.35" , "actualHrs": "3.55"}
+    {"start": "05/07/2018:05:48" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": ""},
+    {"start": "05/07/2018:17:30" , "tail": "NOO3XJ" , "origin": "PSP" , "destination": "PWK" , "estimatedHrs": "3.35" , "actualHrs": ""}
     ]},
-  { "paymentStatus": "Funded", "tripDate": "06/21/2018", "operator": "Meridian", "tripId": "327359", "payment": "4343", "estimatedHrs": "4.05", "actualHrs": "4.50" , "paymentAmount": "33,857.00", "detail": [
-    {"start": "05/06/18:15:48" , "tail": "NOO3XJ" , "origin": "PSP" , "destination": "PWK" , "estimatedHrs": "4.05" , "actualHrs": "4.50"},
-    {"start": "26/05/18:1730" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": "4.25"}
+  { "paymentStatus": "Funded", "tripDate": "05/02/2018", "operator": "Meridian", "tripId": "30102", "payment": "101", "estimatedHrs": "4.05", "actualHrs": "" , "paymentAmount": "33857.00", "totalAmount": "35857.00", "detail": [
+    {"start": "05/02/2018:11:48" , "tail": "NOO3XJ" , "origin": "PSP" , "destination": "PWK" , "estimatedHrs": "4.05" , "actualHrs": ""},
+    {"start": "05/03/2018:15:30" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": ""}
     ]},
-  { "paymentStatus": "New", "tripDate": "07/06/2018", "operator": "Meridian", "tripId": "317843", "payment": "", "estimatedHrs": "4.05", "actualHrs": "4.50" , "paymentAmount": "35,857.00"},
-  { "paymentStatus": "Funded", "tripDate": "08/06/2018", "operator": "Meridian", "tripId": "316860", "payment": "212", "estimatedHrs": "4.05", "actualHrs": "4.50" , "paymentAmount": "45,00.00"},
-  { "paymentStatus": "New", "tripDate": "09/06/2018", "operator": "Meridian", "tripId": "317740", "payment": "", "estimatedHrs": "4.05", "actualHrs": "4.10" , "paymentAmount": "38,850.00",  "detail": [
-    {"start": "05/06/18:15:48" , "tail": "NOO3XJ" , "origin": "PSP" , "destination": "PWK" , "estimatedHrs": "4.05" , "actualHrs": "4.50"},
-    {"start": "26/05/18:1730" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": "4.25"}
+  { "paymentStatus": "New", "tripDate": "05/06/2018", "operator": "Meridian", "tripId": "30103", "payment": "", "estimatedHrs": "4.05", "actualHrs": "" , "paymentAmount": "35857.00", "totalAmount": "35857.00"},
+  { "paymentStatus": "Funded", "tripDate": "05/06/2018", "operator": "Meridian", "tripId": "30104", "payment": "102", "estimatedHrs": "4.05", "actualHrs": "" , "paymentAmount": "45450.00", "totalAmount": "45450.00"},
+  { "paymentStatus": "New", "tripDate": "05/07/2018", "operator": "Meridian", "tripId": "30105", "payment": "", "estimatedHrs": "4.05", "actualHrs": "" , "paymentAmount": "38850.00", "totalAmount": "38850.00",  "detail": [
+    {"start": "05/08/2018:15:48" , "tail": "NOO3XJ" , "origin": "PSP" , "destination": "PWK" , "estimatedHrs": "4.05" , "actualHrs": ""},
+    {"start": "05/09/2018:19:30" , "tail": "NOO3XJ" , "origin": "SNA" , "destination": "PSK" , "estimatedHrs": "4.05" , "actualHrs": ""}
   ]}
 
 ]

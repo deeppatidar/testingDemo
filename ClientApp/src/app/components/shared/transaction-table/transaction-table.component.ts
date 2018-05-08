@@ -1,4 +1,4 @@
-import { Component, OnInit , Input} from '@angular/core';
+import { Component, OnInit , Input, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-transaction-table',
@@ -10,9 +10,56 @@ export class TransactionTableComponent implements OnInit {
   @Input() search : any;
   @Input() optionsSelect : Array<any>;
   @Input() activeUrl : string;
+  @ViewChild('confirmed') public confirmedModal;
+  @ViewChild('completed') public completedModal;
+  @ViewChild('cancelled') public cancelledModal;
+  rowData : any;
+  name : string;
+  quote : string;
+  broker : string;
+  operator : string;
+  notes : string;
+  trip: string;
+  amount: number;
+  totalAmount : any;
+  additionalAmount : string;
   sortDirection = "asc";
   constructor() {
 
+  }
+
+  show(rowData:any, modalType: string){
+      this.rowData = rowData;
+      this.trip = rowData.tripId;
+      this.quote =  rowData.paymentAmount;
+      this.operator = rowData.operator;
+      this.totalAmount = rowData.totalAmount;
+      this.additionalAmount =  '';
+      if(modalType === 'confirmed') {
+          this.confirmedModal.show();
+      } else if (modalType === 'completed') {
+          this.completedModal.show();
+      } else {
+          this.cancelledModal.show();
+      }
+  }
+
+
+  addAmount(addAmount: number) {
+    var temp = this.rowData.totalAmount.toString().replace(',','');
+    this.totalAmount = parseFloat(temp) + addAmount;
+  }
+
+  hide(modalType: string) {
+      this.amount = null;
+      this.totalAmount = null;
+      if(modalType === 'confirmed') {
+          this.confirmedModal.hide();
+      } else if (modalType === 'completed') {
+          this.completedModal.hide();
+      } else {
+          this.cancelledModal.hide();
+      }
   }
 
   ngOnInit() {

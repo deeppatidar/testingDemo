@@ -35,6 +35,7 @@ import { BrokerTableComponent } from './components/shared/broker/broker-table.co
 import { OperatorComponent } from './components/featured/operator/operator.component';
 import { BankActivityComponent } from './components/featured/operator/bank-activity.component';
 import { GeneralLedgerTableComponent } from './components/shared/general-ledger-table/general-ledger-table.component';
+import { CurrencyFormatorPipe } from './pipes/currency-formator.pipe';
 
 export function getJwtToken(): string {
   const parsedToken = JSON.parse(localStorage.getItem('currentUser'));
@@ -65,7 +66,8 @@ export function getJwtToken(): string {
     BrokerTableComponent,
     OperatorComponent,
     BankActivityComponent,
-    GeneralLedgerTableComponent
+    GeneralLedgerTableComponent,
+    CurrencyFormatorPipe
   ],
   imports: [
     // BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
