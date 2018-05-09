@@ -33,12 +33,12 @@ const routes: Routes = [
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
-      { path: '', component: PaymentsInfoComponent, pathMatch: "full", canActivate: [AuthGuard] },
-      { path: 'confirmed-trip', component: PaymentsInfoComponent, canActivate: [AuthGuard] },
-      { path: 'completed-trip', component: PaymentsInfoComponent, canActivate: [AuthGuard] },
-      { path: 'cancelled-trip', component: PaymentsInfoComponent, canActivate: [AuthGuard] },
-      { path: 'general-ledger', component: PaymentsInfoComponent, canActivate: [AuthGuard] },
-      {path: '**', redirectTo: 'confirmed-trip'},
+      { path: '', component: PaymentsInfoComponent, pathMatch: "full", canActivate: [AuthGuard]},
+      { path: 'confirmed-trip', component: PaymentsInfoComponent, canActivate: [AuthGuard]},
+      { path: 'completed-trip', component: PaymentsInfoComponent, canActivate: [AuthGuard]},
+      { path: 'cancelled-trip', component: PaymentsInfoComponent, canActivate: [AuthGuard]},
+      { path: 'general-ledger', component: PaymentsInfoComponent, canActivate: [AuthGuard]},
+      {path: '**', redirectTo: 'confirmed-trip', canActivate: [AuthGuard]},
     ]
   },
   {
