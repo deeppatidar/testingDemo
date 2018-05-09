@@ -43,7 +43,7 @@ export class AuthService {
 
     const tokenExpired: boolean = this.jwtHelperService.isTokenExpired(token);
 
-    if (!tokenExpired && !this.isRouting) {
+    if (tokenExpired && !this.isRouting) {
       const router = this.injector.get<Router>(Router);
       if (!router.isActive('trips', true)) {
         this.isRouting = true;
