@@ -34,16 +34,18 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
+    console.log("Inside loggin method app service");
     const token: string = this.jwtHelperService.tokenGetter();
     //const token: string = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser'))
-
+    console.log(token);
     if (!token) {
-      return false;
+      //return false;
     }
-
+    console.log(token);
     const tokenExpired: boolean = this.jwtHelperService.isTokenExpired(token);
 
-    if (!tokenExpired && !this.isRouting) {
+    if (tokenExpired && !this.isRouting) {
+
       const router = this.injector.get<Router>(Router);
       if (!router.isActive('trips', true)) {
         this.isRouting = true;
@@ -65,6 +67,7 @@ export class AuthService {
   }
 
   updateToken(): void {
+
     const parsedToken = JSON.parse(localStorage.getItem('currentUser'));
     const username = parsedToken.username;
 
@@ -72,6 +75,7 @@ export class AuthService {
   }
 
   refreshToken(): Observable<boolean> {
+
     if (!this.refresh_token || !this.loggedInUser) {
       return Observable.of(false);
     }
@@ -123,9 +127,12 @@ export class AuthService {
     //console.log('Login object: ' + JSON.stringify(object));
     return this.http.post(`${this.getApiUrl()}Accounts/Token${(suffix ? `/${suffix}` : ``)}`, body)
       //.map(res => res.json());
+
       .map((response: any) => {
+
         // login successful if there's a jwt token in the response
         const token = response && response.data.access_token;
+        // console.log(token);
         if (token) {
           this.loggedInUser = username;
           console.log('Received token');

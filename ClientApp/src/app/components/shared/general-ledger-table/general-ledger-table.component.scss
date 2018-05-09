@@ -1,73 +1,23 @@
 @mixin tablepadding {
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  //padding: 0px 5px 0px 5px;
+  line-height: 50px;
 }
 .card {
   .table-heading {
+    padding: 10px 0px 10px 0px;
     border-bottom: 2px solid #dee2e6;
     .heading {
       font-size: 15px;
-      font-weight: 500!important;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+      font-weight: 400!important;
+      @include tablepadding;
     }
   }
   .table-data  {
     @include tablepadding;
-    border-bottom: 2px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
     font-weight: 300;
     font-size: 15px;
   }
   .table-data:hover {
     background-color: rgba(0, 0, 0, 0.075);
   }
-
-  i {
-    font-weight: 800;
-  }
-  .accordian-content {
-    margin-left: 7%;
-    background: rgba(0, 0, 0, 0.075);
-  }
-  .collapse-data {
-    margin-left: 0px;
-    margin-right: 0px;
-    border-bottom: 1px solid #dee2e6;
-    font-size: 15px;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-
-  }
 }
-// .sky-button {
-//   height: 35px;
-//   line-height: 12px;
-// }
-//
-// .completed {
-//   color: #00e25b;
-// }
-// .pending {
-//   color: #ff941a;
-// }
-//
-// .sky-border {
-//    border: 1px solid #cfc1c1;
-//    margin: 15px;
-// }
-// .table th td {
-//    text-align: center;
-// }
-// .table-wrapper {
-//     display: block;
-//     max-height: 300px;
-//     overflow-y: auto;
-//     margin-top: -12px;
-//     border-top: none !important;
-//     border: 1px solid lightgrey;
-// }
-// .sky-table {
-//   width: 100%;
-//   margin-bottom: 100px;
-// }

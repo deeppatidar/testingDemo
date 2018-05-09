@@ -1,21 +1,29 @@
 @mixin tablepadding {
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  //padding: 0px 5px 0px 5px;
+  line-height: 50px;
 }
+@media screen and (max-width: 1024px) {
+  .tran-table {
+    width: 1200px;
+    overflow-y: scroll;
+  }
+}
+
 .card {
   .table-heading {
+    padding: 10px 0px 10px 0px;
     border-bottom: 2px solid #dee2e6;
     .heading {
       font-size: 15px;
       font-weight: 400!important;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
+        @include tablepadding;
     }
+  }
+  .table-content {
+    // overflow-y: scroll;
   }
   .table-data  {
     @include tablepadding;
-    border-bottom: 2px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
     font-size: 15px;
     font-weight: 300;
   }
@@ -31,7 +39,7 @@
     margin-top: 10px;
     margin-bottom: 5px;
     background: rgba(0, 0, 0, 0.075);
-    width: 91%;
+    width: 93%;
   }
   .collapse-data {
     margin-left: 0px;
@@ -86,13 +94,13 @@
 }
 .custom-col {
   width: 7%;
-  padding-right: 1px;
+  margin-right: 10px;
 }
 
 .payment-btn-info {
-  padding: 5px 10px;
+  font-size: 13px;
+  padding: 8px 15px;
   margin: 0px;
-  font-size: 15px;
 }
 .btn-custom-color {
   background-color: #3f5c7f;

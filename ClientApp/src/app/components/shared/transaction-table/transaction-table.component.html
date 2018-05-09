@@ -9,22 +9,22 @@
           <a (click)="sortData('paymentStatus')">Payment Status<i class="transaction-table fa fa-sort ml-1" ></i></a>
         </div>
       </div>
-      <div class="col-sm-1">
+      <div class="col md-1 px-0">
         <div class="heading">
         <a (click)="sortData('tripDate')">Trip Date<i class="transaction-table fa fa-sort ml-1" ></i></a>
         </div>
       </div>
-      <div class="col">
+      <div class="col-md-1 px-0">
         <div class="heading">
           <a (click)="sortData('operator')">Operator<i class="transaction-table fa fa-sort ml-1" ></i></a>
         </div>
       </div>
-      <div class="col-sm-1">
+      <div class="col-sm-1 px-0">
         <div class="heading">
         <a (click)="sortData('tripId')">Trip(#)<i class="transaction-table fa fa-sort ml-1" ></i></a>
         </div>
       </div>
-      <div class="col">
+      <div class="col px-0">
         <div class="heading">
           <a (click)="sortData('payment')">Payment(#)<i class="transaction-table fa fa-sort ml-1" ></i></a>
         </div>
@@ -63,16 +63,16 @@
           <button *ngIf="rowData.paymentStatus === 'Funded'" type="button" class="btn btn-outline-secondary transaction-label-btn">{{rowData.paymentStatus}}</button>
           <button *ngIf="rowData.paymentStatus === 'Released'" type="button" class="btn btn-outline-warning transaction-label-btn">{{rowData.paymentStatus}}</button>
         </div>
-        <div class="col-sm-1">
+        <div class="col px-0">
           {{rowData.tripDate}}
         </div>
-        <div class="col">
+        <div class="col-md-1 px-0">
           {{rowData.operator}}
         </div>
-        <div class="col-sm-1">
+        <div class="col-sm-1 px-0">
           {{rowData.tripId}}
         </div>
-        <div class="col">
+        <div class="col px-0">
           {{rowData.payment}}
         </div>
         <div class="col-sm-1">

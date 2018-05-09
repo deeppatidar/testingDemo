@@ -40,7 +40,7 @@ export class PaymentsInfoComponent implements OnInit {
             { value: '2', label: '318954' },
             { value: '3', label: '318956' },
         ];
-    this.staticTabs.tabs[0].active=true;
+    // this.staticTabs.tabs[0].active=true;
     this.activeUrl = this.router.url;
 
 
