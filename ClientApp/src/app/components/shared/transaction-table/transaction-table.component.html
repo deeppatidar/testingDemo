@@ -296,20 +296,17 @@
             <div class="modal-body custom-modal-body mb-0">
               <div *ngIf="screenName ==='confirmed'">
                 <div class="txt-align">
-                  Payment Submitted
-                </div>
-                <br>
-                <div class="txt-align txt-13">
-                  Payment successfully submitted
+                  Payment request successfully submitted
                 </div>
               </div>
-              <div *ngIf="screenName !='confirmed'">
+              <div *ngIf="screenName ==='completed'">
                 <div class="txt-align">
-                  Release Submitted
+                  Release request successfully submitted
                 </div>
-                <br>
-                <div class="txt-align txt-13">
-                  Release successfully submitted
+              </div>
+              <div *ngIf="screenName ==='cancelled'">
+                <div class="txt-align">
+                  Refund request successfully submitted
                 </div>
               </div>
               <div class="md-form form-sm clearfix">

@@ -34,14 +34,12 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    console.log("Inside loggin method app service");
     const token: string = this.jwtHelperService.tokenGetter();
     //const token: string = localStorage.getItem('currentUser') ? JSON.parse(localStorage.getItem('currentUser'))
-    console.log(token);
     if (!token) {
       //return false;
     }
-    console.log(token);
+    //console.log(token);
     const tokenExpired: boolean = this.jwtHelperService.isTokenExpired(token);
 
     if (tokenExpired && !this.isRouting) {
@@ -94,7 +92,7 @@ export class AuthService {
         const token = response && response.body.access_token;
         if (token) {
           const username = this.loggedInUser;
-          console.log('Received token');
+          //console.log('Received token');
           // set token property
           this.token = token;
           this.refresh_token = response.body.refresh_token;

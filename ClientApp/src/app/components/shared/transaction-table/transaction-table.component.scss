@@ -10,7 +10,7 @@
 
 .card {
   .table-heading {
-    padding: 10px 0px 10px 0px;
+    //padding: 10px 0px 10px 0px;
     border-bottom: 2px solid #dee2e6;
     .heading {
       font-size: 15px;
@@ -25,7 +25,7 @@
     @include tablepadding;
     border-bottom: 1px solid #dee2e6;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 300 !important;
   }
   .table-data:hover {
     //background-color: rgba(0, 0, 0, 0.075);
