@@ -100,7 +100,7 @@ export class PaymentsInfoComponent implements OnInit {
             for (let key in value) {
 
               if(value[key]== '' && key != "toggle") {
-                console.log(key);
+                //console.log(key);
                 value[key]="-";
               }
             }
@@ -120,7 +120,7 @@ export class PaymentsInfoComponent implements OnInit {
             for (let key in value) {
 
               if(value[key]== '' && key != "toggle") {
-                console.log(key);
+                //console.log(key);
                 value[key]="-";
               }
             }

@@ -13,17 +13,24 @@ export class TransactionTableComponent implements OnInit {
   @ViewChild('confirmed') public confirmedModal;
   @ViewChild('completed') public completedModal;
   @ViewChild('cancelled') public cancelledModal;
+  @ViewChild('successed') public successdModal;
   rowData : any;
   name : string;
-  quote : string;
+  quote : number;
   broker : string;
   operator : string;
   notes : string;
   trip: string;
   amount: number;
   totalAmount : any;
+  paymentAmount : any;
   additionalAmount : string;
   sortDirection = "asc";
+  additionalAmountFlag: number = 1;
+  estimatedHrs: string;
+  actualHrs: string;
+  message: string;
+  screenName: string;
   constructor() {
 
   }
@@ -34,6 +41,9 @@ export class TransactionTableComponent implements OnInit {
       this.quote =  rowData.paymentAmount;
       this.operator = rowData.operator;
       this.totalAmount = rowData.totalAmount;
+      this.estimatedHrs = rowData.estimatedHrs;
+      this.actualHrs = rowData.actualHrs;
+      this.paymentAmount = rowData.paymentAmount;
       this.additionalAmount =  '';
       if(modalType === 'confirmed') {
           this.confirmedModal.show();
@@ -48,18 +58,41 @@ export class TransactionTableComponent implements OnInit {
   addAmount(addAmount: number) {
     var temp = this.rowData.totalAmount.toString().replace(',','');
     this.totalAmount = parseFloat(temp) + addAmount;
+    if(this.totalAmount > this.quote) {
+      this.additionalAmountFlag = 2;
+    } else if (this.totalAmount < this.quote) {
+        this.additionalAmountFlag = 3;
+    }
+    console.log(this.additionalAmountFlag);
   }
 
   hide(modalType: string) {
+    console.log(modalType);
       this.amount = null;
       this.totalAmount = null;
       if(modalType === 'confirmed') {
           this.confirmedModal.hide();
       } else if (modalType === 'completed') {
           this.completedModal.hide();
-      } else {
+      } else if(modalType === 'cancelled') {
           this.cancelledModal.hide();
+      } else {
+          this.successdModal.hide();
       }
+  }
+
+  releaseAmount(message: string, screen: string) {
+    console.log(screen);
+    this.message = message;
+    this.screenName = screen;
+    if(screen === 'confirmed') {
+        this.confirmedModal.hide();
+    } else if(screen === 'completed') {
+        this.completedModal.hide();
+    } else {
+      this.cancelledModal.hide();
+    }
+    this.successdModal.show();
   }
 
   ngOnInit() {

@@ -122,6 +122,10 @@
           </div>
         </div>
       </div>
+</div>
+</div>
+</div>
+
 <!-- modal -->
 <div mdbModal #confirmed="mdb-modal" class="modal fade" id="modalContactForm" [config]="{ignoreBackdropClick: true}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document" >
@@ -171,7 +175,7 @@
                 </div>
                 <div class="modal-info">Money will be moved from Broker's account to stagin Account</div>
                 <div class="text-center mt-1-half">
-                    <button class="btn btn-blue mb-2 custom-btn waves-light" mdbWavesEffect>Fund Trip</button>
+                    <button class="btn btn-blue mb-2 custom-btn waves-light" mdbWavesEffect (click)="releaseAmount('Funded Successfuly', 'confirmed')">Fund Trip</button>
                 </div>
             </div>
         </div>
@@ -205,7 +209,7 @@
                 </div>
                 <div class="md-form form-sm">
                   <div for="form21"><strong>Quote Amount #</strong></div>
-                  <div for="form21">{{quote}}</div>
+                  <div for="form21">{{quote | currencyFormator}}</div>
                 </div>
 
                 <div class="md-form form-sm">
@@ -222,9 +226,12 @@
                     <textarea type="text" mdbActive id="textarea" class="custom-textarea modal-custom-input md-textarea mb-0"></textarea>
                     <label for="textarea">Notes</label>
                 </div>
-                <div class="modal-info">Money will be moved from Staging account to Operator's account and the additional amount will be moved from Broker's account to Operator account</div>
+
+                <div class="modal-info" *ngIf="additionalAmountFlag == 1">Money will be moved from Staging account to Operator's account</div>
+                <div class="modal-info" *ngIf="additionalAmountFlag == 2">Money will be moved from Staging account to Operator's account and the additional amount will be moved from Broker's account to Operator account</div>
+                <div class="modal-info" *ngIf="additionalAmountFlag == 3">Money will be moved from Staging account to Operator's account and the additional amount will be moved from Staging account to Broker's account</div>
                 <div class="text-center mt-1-half">
-                      <button class="btn btn-blue custom-btn mb-2 waves-light" mdbWavesEffect>Release</button>
+                      <button class="btn btn-blue custom-btn mb-2 waves-light" mdbWavesEffect (click)="releaseAmount('Submitted Successfully', 'completed')">Release</button>
                 </div>
             </div>
         </div>
@@ -259,7 +266,7 @@
 
                 <div class="md-form form-sm">
                   <div for="form21"><strong>Quote Amount</strong></div>
-                  <div for="form21">{{quote}}</div>
+                  <div for="form21">{{quote| currencyFormator}}</div>
                 </div>
 
                 <div class="md-form form-sm">
@@ -268,7 +275,7 @@
                 </div>
                 <div class="modal-info">Money will be moved from Staging Account to Broker's account</div>
                 <div class="text-center mt-1-half">
-                    <button class="btn btn-blue custom-btn mb-2 waves-light" mdbWavesEffect>Release</button>
+                    <button class="btn btn-blue custom-btn mb-2 waves-light" mdbWavesEffect (click)="releaseAmount('Submitted Successfully', 'cancelled')">Release</button>
                 </div>
             </div>
         </div>
@@ -276,6 +283,60 @@
     </div>
 </div>
 
-</div>
-</div>
+<div mdbModal #successed="mdb-modal" class="modal fade" id="modalSuccessForm" [config]="{ignoreBackdropClick: true}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <!--Content-->
+        <div class="modal-content">
+            <!--Header-->
+            <div class="modal-header">
+              <h4 class="modal-title custom-modal-title w-100" id="myModalLabel"> Trip #{{trip}}</h4>
+              <span  class="pointer"  aria-hidden="true" (click)="hide('successed')">×</span>
+            </div>
+            <!--Body-->
+            <div class="modal-body custom-modal-body mb-0">
+              <div *ngIf="screenName ==='confirmed'">
+                <div class="txt-align">
+                  Payment Submitted
+                </div>
+                <br>
+                <div class="txt-align txt-13">
+                  Payment successfully submitted
+                </div>
+              </div>
+              <div *ngIf="screenName !='confirmed'">
+                <div class="txt-align">
+                  Release Submitted
+                </div>
+                <br>
+                <div class="txt-align txt-13">
+                  Release successfully submitted
+                </div>
+              </div>
+              <div class="md-form form-sm clearfix">
+                  <div for="form21">
+                    <div class="half-width"><strong>Est. Hrs</strong></div>
+                    <div class="half-width"><strong>Funded Amount</strong></div>
+                  </div>
+                  <div for="form21">
+                    <div class="half-width">{{estimatedHrs}}</div>
+                    <div class="half-width">{{paymentAmount | currencyFormator}}</div>
+                  </div>
+              </div>
+
+              <div class="md-form form-sm clearfix" *ngIf="screenName!='confirmed' && screenName!='cancelled'">
+                <hr>
+                  <div for="form21">
+                    <div class="half-width"><strong>Act. Hrs</strong></div>
+                    <div class="half-width"><strong>Actual Amount</strong></div>
+                  </div>
+                  <div for="form21">
+                    <div class="half-width">{{actualHrs}}</div>
+                    <div class="half-width">{{totalAmount | currencyFormator}}</div>
+                  </div>
+              </div>
+          </div>
+            <div class="modal-footer md-f">&nbsp;</div>
+        </div>
+        <!--/.Content-->
+    </div>
 </div>

@@ -107,6 +107,31 @@
 }
 
 .pointer {cursor: pointer;}
+
+.half-width {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+hr {
+    border-top:1px dotted #000;
+    /*Rest of stuff here*/
+}
+
+.txt-align {
+  text-align: center;
+  font-weight: 300;
+  font-size: 18px;
+  color: #A9A9A9;
+  &.txt-13 {
+    font-size: 13px
+  }
+
+}
+.md-f {
+  border: none!important;
+}
 // .sky-button {
 //   height: 35px;
 //   line-height: 12px;
